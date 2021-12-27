@@ -44,7 +44,7 @@
     "Description": "Restores 20 CP. Can only be used when material status is \"Good\" or \"Excellent\".",
     "Level": 13,
     "Type": "Ability",
-    "WhenMaterialStatus": [ "Good", "Excellent" ]
+    "WhenMaterialCondition": [ "Good", "Excellent" ]
   },
   "WasteNot": {
     "Name": "WasteNot",

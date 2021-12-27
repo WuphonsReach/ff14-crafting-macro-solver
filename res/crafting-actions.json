@@ -1,0 +1,206 @@
+{
+  "BasicSynthesis": {
+    "Name": "Basic Synthesis",
+    "Description": "Increases progress",
+    "Level": 1,
+    "Type": "Ability"
+  },
+  "BasicTouch": {
+    "Name": "Basic Touch",
+    "Description": null,
+    "Level": 5,
+    "Type": "Ability"
+  },
+  "MastersMend": {
+    "Name": "Master's Mend",
+    "Description": null,
+    "Level": 0,
+    "Type": "Ability"
+  },
+  "HastyTouch": {
+    "Name": "Hasty Touch",
+    "Description": null,
+    "Level": 9,
+    "Type": "Ability"
+  },
+  "RapidSynthesis": {
+    "Name": "Rapid Synthesis",
+    "Description": null,
+    "Level": 9,
+    "Type": "Ability"
+  },
+  "Observe": {
+    "Name": "Observe",
+    "Description": null,
+    "Level": 13,
+    "Type": "Ability"
+  },
+  "TricksOfTheTrade": {
+    "Name": "Tricks of the Trade",
+    "Description": null,
+    "Level": 13,
+    "Type": "Ability"
+  },
+  "WasteNot": {
+    "Name": "WasteNot",
+    "Description": null,
+    "Level": 15,
+    "Type": "Ability"
+  },
+  "Veneration": {
+    "Name": "Veneration",
+    "Description": null,
+    "Level": 15,
+    "Type": "Ability"
+  },
+  "StandardTouch": {
+    "Name": "Standard Touch",
+    "Description": null,
+    "Level": 18,
+    "Type": "Ability"
+  },
+  "GreatStrides": {
+    "Name": "Great Strides",
+    "Description": null,
+    "Level": 21,
+    "Type": "Ability"
+  },
+  "Innovation": {
+    "Name": "Innovation",
+    "Description": null,
+    "Level": 26,
+    "Type": "Ability"
+  },
+  "FinalAppraisal": {
+    "Name": "Final Appraisal",
+    "Description": null,
+    "Level": 42,
+    "Type": "Ability"
+  },
+  "WasteNot2": {
+    "Name": "Waste Not II",
+    "Description": null,
+    "Level": 47,
+    "Type": "Ability"
+  },
+  "CollectableSynthesis": {
+    "Name": "Collectable Synthesis",
+    "Description": null,
+    "Level": 50,
+    "Type": "Ability"
+  },
+  "ByregotsBlessing": {
+    "Name": "Byregot's Blessing",
+    "Description": null,
+    "Level": 50,
+    "Type": "Ability"
+  },
+  "PreciseTouch": {
+    "Name": "Precise Touch",
+    "Description": null,
+    "Level": 53,
+    "Type": "Ability"
+  },
+  "MuscleMemory": {
+    "Name": "Muscle Memory",
+    "Description": null,
+    "Level": 54,
+    "Type": "Ability"
+  },
+  "CarefulObservation": {
+    "Name": "Careful Observation",
+    "Description": null,
+    "Level": 0,
+    "Type": "Ability"
+  },
+  "CarefulSynthesis": {
+    "Name": "Careful Synthesis",
+    "Description": null,
+    "Level": 62,
+    "Type": "Ability"
+  },
+  "Manipulation": {
+    "Name": "Manipulation",
+    "Description": null,
+    "Level": 65,
+    "Type": "Ability"
+  },
+  "PrudentTouch": {
+    "Name": "Prudent Touch",
+    "Description": null,
+    "Level": 66,
+    "Type": "Ability"
+  },
+  "FocusedSynthesis": {
+    "Name": "Focused Synthesis",
+    "Description": null,
+    "Level": 67,
+    "Type": "Ability"
+  },
+  "FocusedTouch": {
+    "Name": "Focused Touch",
+    "Description": null,
+    "Level": 68,
+    "Type": "Ability"
+  },
+  "Reflect": {
+    "Name": "Reflect",
+    "Description": null,
+    "Level": 69,
+    "Type": "Ability"
+  },
+  "PrepatoryTouch": {
+    "Name": "Prepatory Touch",
+    "Description": null,
+    "Level": 71,
+    "Type": "Ability"
+  },
+  "Groundwork": {
+    "Name": "Groundwork",
+    "Description": null,
+    "Level": 72,
+    "Type": "Ability"
+  },
+  "DelicateSynthesis": {
+    "Name": "Delicate Synthesis",
+    "Description": null,
+    "Level": 76,
+    "Type": "Ability"
+  },
+  "IntensiveSynthesis": {
+    "Name": "Intensive Synthesis",
+    "Description": null,
+    "Level": 78,
+    "Type": "Ability"
+  },
+  "TrainedEye": {
+    "Name": "Trained Eye",
+    "Description": null,
+    "Level": 80,
+    "Type": "Ability"
+  },
+  "AdvancedTouch": {
+    "Name": "Advanced Touch",
+    "Description": null,
+    "Level": 84,
+    "Type": "Ability"
+  },
+  "HeartAndSoul": {
+    "Name": "Heart and Soul",
+    "Description": null,
+    "Level": 86,
+    "Type": "Ability"
+  },
+  "PrudentSynthesis": {
+    "Name": "Prudent Synthesis",
+    "Description": null,
+    "Level": 88,
+    "Type": "Ability"
+  },
+  "TrainedFinesse": {
+    "Name": "Trained Finesse",
+    "Description": null,
+    "Level": 90,
+    "Type": "Ability"
+  }
+}

@@ -7,199 +7,199 @@
   },
   "BasicTouch": {
     "Name": "Basic Touch",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 5,
     "Type": "Ability"
   },
   "MastersMend": {
     "Name": "Master's Mend",
-    "Description": null,
+    "Description": "Restores item durability by 30.",
     "Level": 0,
     "Type": "Ability"
   },
   "HastyTouch": {
     "Name": "Hasty Touch",
-    "Description": null,
+    "Description": "Increases quality and requires no CP.",
     "Level": 9,
     "Type": "Ability"
   },
   "RapidSynthesis": {
     "Name": "Rapid Synthesis",
-    "Description": null,
+    "Description": "Increases progress.",
     "Level": 9,
     "Type": "Ability"
   },
   "Observe": {
     "Name": "Observe",
-    "Description": null,
+    "Description": "Do nothing for one step.",
     "Level": 13,
     "Type": "Ability"
   },
   "TricksOfTheTrade": {
     "Name": "Tricks of the Trade",
-    "Description": null,
+    "Description": "Restores 20 CP. Can only be used when material status is \"Good\" or \"Excellent\".",
     "Level": 13,
     "Type": "Ability"
   },
   "WasteNot": {
     "Name": "WasteNot",
-    "Description": null,
+    "Description": "Reduces loss of durability by 50% for the next four steps.",
     "Level": 15,
     "Type": "Ability"
   },
   "Veneration": {
     "Name": "Veneration",
-    "Description": null,
+    "Description": "Increases efficiency of Synthesis actions by 50% for the next four steps.",
     "Level": 15,
     "Type": "Ability"
   },
   "StandardTouch": {
     "Name": "Standard Touch",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 18,
     "Type": "Ability"
   },
   "GreatStrides": {
     "Name": "Great Strides",
-    "Description": null,
+    "Description": "Increases the efficiency of next Touch action by 100%. Effect active for three steps.",
     "Level": 21,
     "Type": "Ability"
   },
   "Innovation": {
     "Name": "Innovation",
-    "Description": null,
+    "Description": "Increases efficiency of Touch actions by 50% for the next four steps.",
     "Level": 26,
     "Type": "Ability"
   },
   "FinalAppraisal": {
     "Name": "Final Appraisal",
-    "Description": null,
+    "Description": "The next action that would complete item synthesis will instead leave one progress point remaining.",
     "Level": 42,
     "Type": "Ability"
   },
   "WasteNot2": {
     "Name": "Waste Not II",
-    "Description": null,
+    "Description": "Reduces loss of durability by 50% for the next eight steps.",
     "Level": 47,
     "Type": "Ability"
   },
   "CollectableSynthesis": {
     "Name": "Collectable Synthesis",
-    "Description": null,
+    "Description": "Use existing recipes to create collectables without increasing step count.",
     "Level": 50,
     "Type": "Ability"
   },
   "ByregotsBlessing": {
     "Name": "Byregot's Blessing",
-    "Description": null,
+    "Description": "Increases quality. Inner Quiet effect ends upon use.",
     "Level": 50,
     "Type": "Ability"
   },
   "PreciseTouch": {
     "Name": "Precise Touch",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 53,
     "Type": "Ability"
   },
   "MuscleMemory": {
     "Name": "Muscle Memory",
-    "Description": null,
+    "Description": "Increases progress.",
     "Level": 54,
     "Type": "Ability"
   },
   "CarefulObservation": {
     "Name": "Careful Observation",
-    "Description": null,
-    "Level": 0,
+    "Description": "Do nothing for one step, preserving the status of any actions presently in effect.",
+    "Level": 55,
     "Type": "Ability"
   },
   "CarefulSynthesis": {
     "Name": "Careful Synthesis",
-    "Description": null,
+    "Description": "Increases progress.",
     "Level": 62,
     "Type": "Ability"
   },
   "Manipulation": {
     "Name": "Manipulation",
-    "Description": null,
+    "Description": "Restores 5 points of durability after each step for the next eight steps.",
     "Level": 65,
     "Type": "Ability"
   },
   "PrudentTouch": {
     "Name": "Prudent Touch",
-    "Description": null,
+    "Description": "Increases quality at half the durability cost.",
     "Level": 66,
     "Type": "Ability"
   },
   "FocusedSynthesis": {
     "Name": "Focused Synthesis",
-    "Description": null,
+    "Description": "Increases progress.",
     "Level": 67,
     "Type": "Ability"
   },
   "FocusedTouch": {
     "Name": "Focused Touch",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 68,
     "Type": "Ability"
   },
   "Reflect": {
     "Name": "Reflect",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 69,
     "Type": "Ability"
   },
   "PrepatoryTouch": {
     "Name": "Prepatory Touch",
-    "Description": null,
+    "Description": "Increases quality at a greater cost to durability.",
     "Level": 71,
     "Type": "Ability"
   },
   "Groundwork": {
     "Name": "Groundwork",
-    "Description": null,
+    "Description": "Increases progress at greater cost to durability. Efficiency decreases by half when durability is below durability cost.",
     "Level": 72,
     "Type": "Ability"
   },
   "DelicateSynthesis": {
     "Name": "Delicate Synthesis",
-    "Description": null,
+    "Description": "Increases both progress and quality.",
     "Level": 76,
     "Type": "Ability"
   },
   "IntensiveSynthesis": {
     "Name": "Intensive Synthesis",
-    "Description": null,
+    "Description": "Increases progress.",
     "Level": 78,
     "Type": "Ability"
   },
   "TrainedEye": {
     "Name": "Trained Eye",
-    "Description": null,
+    "Description": "Increases quality by 100%. Available only on the first step. Recipe level must be at least 10 levels below yours. Cannot be used with expert crafting recipes.",
     "Level": 80,
     "Type": "Ability"
   },
   "AdvancedTouch": {
     "Name": "Advanced Touch",
-    "Description": null,
+    "Description": "Increases quality.",
     "Level": 84,
     "Type": "Ability"
   },
   "HeartAndSoul": {
     "Name": "Heart and Soul",
-    "Description": null,
+    "Description": "Allows the execution of Precise Touch, Intensive Synthesis, or Tricks of the Trade regardless of material condition. Effect ends if the aforementioned actions are executed when material condition is not \"Good\" or \"Excellent\".",
     "Level": 86,
     "Type": "Ability"
   },
   "PrudentSynthesis": {
     "Name": "Prudent Synthesis",
-    "Description": null,
+    "Description": "Increases progress at half the durability cost.",
     "Level": 88,
     "Type": "Ability"
   },
   "TrainedFinesse": {
     "Name": "Trained Finesse",
-    "Description": null,
+    "Description": "Increases quality at no cost to durability.",
     "Level": 90,
     "Type": "Ability"
   }

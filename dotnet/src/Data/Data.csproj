@@ -2,11 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="MaterialConditions.json" />
     <None Remove="crafting-actions.json" />
+    <None Remove="CraftingActions.json" />
+    <EmbeddedResource Include="CraftingActions.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>

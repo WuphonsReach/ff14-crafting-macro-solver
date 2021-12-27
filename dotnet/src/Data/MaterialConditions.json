@@ -1,0 +1,14 @@
+{
+  "Poor": {
+    "Name": "Poor"
+  },
+  "Normal": {
+    "Name": "Normal"
+  },
+  "Good": {
+    "Name": "Good"
+  },
+  "Excellent": {
+    "Name": "Excellent"
+  }
+}

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Data.Embedded;
+using EmbeddedResources = WuphonsReach.FF14Crafting.Solver.Util.EmbeddedResources;
 
-namespace Data
+namespace WuphonsReach.FF14Crafting.Solver.Data
 {
     /// <summary>Loaded from MaterialConditions.json embedded file.</summary>
     public class MaterialConditions

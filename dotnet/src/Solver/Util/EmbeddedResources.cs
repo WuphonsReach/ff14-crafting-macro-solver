@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace Data.Embedded
+namespace WuphonsReach.FF14Crafting.Solver.Util
 {
     public static class EmbeddedResources
     {

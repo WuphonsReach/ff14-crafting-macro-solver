@@ -1,7 +1,8 @@
 using System.Linq;
+using WuphonsReach.FF14Crafting.Solver.Data;
 using Xunit;
 
-namespace Data.Tests
+namespace WuphonsReach.FF14CraftingMacroSolver.Models.Tests.Data
 {
     public class CraftingActionsTests
     {

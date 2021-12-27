@@ -1,6 +1,6 @@
-namespace Models
+namespace WuphonsReach.FF14Crafting.Solver.Models
 {
-    public class ProgressResult
+    public class QualityResult
     {
         public bool Achieved { get; set; }
         public int Target { get; set; }

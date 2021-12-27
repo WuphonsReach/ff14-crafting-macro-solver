@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Data.Embedded;
+using WuphonsReach.FF14Crafting.Solver.Util;
 
-namespace Data
+namespace WuphonsReach.FF14Crafting.Solver.Data
 {
     /// <summary>Loaded from CraftingActions.json embedded file.</summary>
     public class CraftingActions

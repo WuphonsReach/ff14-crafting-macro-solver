@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Data
+namespace WuphonsReach.FF14Crafting.Solver.Data
 {
     public class CraftingAction
     {

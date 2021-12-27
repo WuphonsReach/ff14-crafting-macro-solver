@@ -3,11 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>9</LangVersion>
+    <RootNamespace>WuphonsReach.FF14Crafting.Solver</RootNamespace>
+    <PackageId>WuphonsReach.FF14CraftingMacroSolver.Models</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="crafting-actions.json" />
-    <None Remove="CraftingActions.json" />
+    <EmbeddedResource Include="Data\CraftingActions.json" />
+    <EmbeddedResource Include="Data\MaterialConditions.json" />
   </ItemGroup>
 
   <ItemGroup>

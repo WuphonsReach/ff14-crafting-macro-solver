@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Models
+namespace WuphonsReach.FF14Crafting.Solver.Models
 {
     public class Macro
     {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using WuphonsReach.FF14Crafting.Solver.Models.Results;
 
 namespace WuphonsReach.FF14Crafting.Solver.Models
 {
@@ -6,17 +7,8 @@ namespace WuphonsReach.FF14Crafting.Solver.Models
     {
         public string Name { get; set; }
         
-        public List<Step> Steps { get; set; } = new List<Step>();
-
-        public Result Result { get; private set; }
-
-        public void CalculateResult(
-            Crafter crafter,
-            Recipe recipe
-            )
-        {
-            // TODO: Calculate Result object
-            Result = null;
-        }
+        public List<Step> Steps { get; set; }
+        
+        public StepResult FinalStepResult { get; private set; }
     }
 }

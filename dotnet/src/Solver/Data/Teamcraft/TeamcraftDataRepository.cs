@@ -56,5 +56,33 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
                     ICollection<TeamcraftRecipe>
                 >("recipes.json"); 
             });
+        
+        public TeamcraftJobAbbr JobAbbrById(int itemId) => 
+            JobAbbrs.Value.TryGetValue(itemId, out var result) 
+                ? result
+                : null;
+        
+        internal readonly Lazy<IDictionary<int, TeamcraftJobAbbr>> JobAbbrs 
+            = new (() =>
+            {
+                return EmbeddedResources.ReadJson<
+                    TeamcraftJsonFiles,
+                    IDictionary<int, TeamcraftJobAbbr>
+                    >("job-abbr.json");
+            });
+
+        public TeamcraftJobName JobNameById(int itemId) => 
+            JobNames.Value.TryGetValue(itemId, out var result) 
+                ? result
+                : null;
+        
+        internal readonly Lazy<IDictionary<int, TeamcraftJobName>> JobNames 
+            = new (() =>
+            {
+                return EmbeddedResources.ReadJson<
+                    TeamcraftJsonFiles,
+                    IDictionary<int, TeamcraftJobName>
+                    >("job-name.json");
+            });
     }
 }

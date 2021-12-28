@@ -2,16 +2,16 @@ using Xunit;
 
 namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
 {
-    /// <summary>Make assertions about the Teamcraft CraftActions JSON data that we
+    /// <summary>Make assertions about the Teamcraft JobName JSON data that we
     /// require to be true.  This will help spot mismatches between the JSON
     /// that we designed for and a later version of the JSON files.
     /// </summary>
     [Collection(nameof(TeamcraftDataRepositoryCollection))]
-    public class TeamcraftCraftActionDataSanityTests
+    public class TeamcraftJobNameDataSanityTests
     {
         private readonly TeamcraftDataRepositoryFixture _fixture;
 
-        public TeamcraftCraftActionDataSanityTests(
+        public TeamcraftJobNameDataSanityTests(
             TeamcraftDataRepositoryFixture fixture
             )
         {
@@ -19,10 +19,10 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
 
         [Fact]
-        public void CraftActions_Count_is_not_zero()
+        public void Items_Count_is_not_zero()
         {
             var db = _fixture.GetRepository();
-            Assert.NotEqual(0, db.CraftActions.Value.Count);
+            Assert.NotEqual(0, db.JobNames.Value.Count);
         }
     }
 }

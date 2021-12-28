@@ -19,19 +19,6 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
 
         [Fact]
-        public void Name_always_returns_something()
-        {
-            var db = _fixture.GetRepository();
-            foreach (var item in db.Items.Value)
-            {
-                Assert.True(
-                    !string.IsNullOrWhiteSpace(item.Value.Name()),
-                    $"{item.Key}: {nameof(item.Value.Name)} is null/whitespace."
-                    );
-            }
-        }
-        
-        [Fact]
         public void Items_Count_is_not_zero()
         {
             var db = _fixture.GetRepository();

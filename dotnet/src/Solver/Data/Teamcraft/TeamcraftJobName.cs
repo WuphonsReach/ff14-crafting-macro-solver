@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
 {
-    public class TeamcraftCraftAction : IHasTeamcraftLanguages
+    public class TeamcraftJobName : IHasTeamcraftLanguages
     {
         [JsonProperty("en")]
         public string English { get; set; }

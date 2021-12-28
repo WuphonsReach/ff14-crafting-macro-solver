@@ -2,7 +2,7 @@ using System.Linq;
 using WuphonsReach.FF14Crafting.Solver.Data;
 using Xunit;
 
-namespace WuphonsReach.FF14CraftingMacroSolver.Models.Tests.Data
+namespace WuphonsReach.FF14Crafting.Solver.Tests.Data
 {
     public class MaterialConditionsTests
     {

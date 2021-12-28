@@ -20,7 +20,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Models
             Recipe recipe
             )
         {
-            throw new System.NotImplementedException();
+            return recipe.Difficulty;
         }
         
         internal static int CalculateQualityTarget(
@@ -28,7 +28,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Models
             Recipe recipe
             )
         {
-            throw new System.NotImplementedException();
+            return recipe.Quality;
         }
     }
 }

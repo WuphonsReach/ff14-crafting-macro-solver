@@ -9,18 +9,24 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
 
         /// <summary>JobId can be zero, if the recipe is not for a crafting job.</summary>
         [JsonProperty("job")]
-        public int JobId { get; set; }
+        public int? JobId { get; set; }
 
         [JsonProperty("lvl")]
-        public int Level { get; set; }
+        public int? Level { get; set; }
         
-        public int Yields { get; set; }
+        public int? Yields { get; set; }
         
-        /// <summary>Item ID of the result.  See <see cref="TeamcraftItems"/> dictionary
-        /// keys to obtain the item name from the <see cref="TeamcraftItem"/>.</summary>
+        /// <summary>Item ID of the result.</summary>
         [JsonProperty("result")]
-        public int ResultId { get; set; }
- 
+        public int? ResultId { get; set; }
+
+        [JsonProperty("durability")]
+        public int? Durability { get; set; }
         
+        [JsonProperty("quality")]
+        public int? Quality { get; set; }
+        
+        [JsonProperty("progress")]
+        public int? Progress { get; set; }
     }
 }

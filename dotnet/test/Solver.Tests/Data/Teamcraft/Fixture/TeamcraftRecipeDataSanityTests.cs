@@ -19,6 +19,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
             _fixture = fixture;
         }
         
+        /// <summary>We have at least one recipe in the list.</summary>
         [Fact]
         public void Recipes_Count_is_not_zero()
         {
@@ -53,11 +54,10 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
         
         [Fact]
-        public void There_are_JobId_values_greater_than_zero()
+        public void There_are_any_JobId_values_greater_than_zero()
         {
             var db = _fixture.GetRepository();
-            var result = db.Recipes.Value.Count(x => x.JobId > 0);
-            Assert.NotEqual(0, result);
+            Assert.Contains(db.Recipes.Value, x => x.JobId > 0);
         }
         
         [Fact]
@@ -74,11 +74,52 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
         
         [Fact]
-        public void There_are_Level_values_greater_than_zero()
+        public void There_are_any_Level_values_greater_than_zero()
         {
             var db = _fixture.GetRepository();
-            var result = db.Recipes.Value.Count(x => x.Level > 0);
-            Assert.NotEqual(0, result);
+            Assert.Contains(db.Recipes.Value, x => x.Level > 0);
+        }
+        
+        [Fact]
+        public void All_ResultId_greater_than_zero_map_to_an_item()
+        {
+            var db = _fixture.GetRepository();
+            foreach (var recipe in db.Recipes.Value.Where(x => x.ResultId.HasValue && x.ResultId > 0))
+            {
+                var item = db.ItemById(recipe.ResultId.Value);
+                Assert.True(
+                    item != null,
+                    $"ID {recipe.Id}: {nameof(recipe.ResultId)} {recipe.ResultId} is not a valid Item ID."
+                );
+            }
+        }
+        
+        [Fact]
+        public void There_are_any_ResultId_values_greater_than_zero()
+        {
+            var db = _fixture.GetRepository();
+            Assert.Contains(db.Recipes.Value, x => x.ResultId > 0);
+        }
+        
+        [Fact]
+        public void There_are_any_Quality_values_greater_than_zero()
+        {
+            var db = _fixture.GetRepository();
+            Assert.Contains(db.Recipes.Value, x => x.Quality > 0);
+        }
+        
+        [Fact]
+        public void There_are_any_Durability_values_greater_than_zero()
+        {
+            var db = _fixture.GetRepository();
+            Assert.Contains(db.Recipes.Value, x => x.Durability > 0);
+        }
+        
+        [Fact]
+        public void There_are_any_Progress_values_greater_than_zero()
+        {
+            var db = _fixture.GetRepository();
+            Assert.Contains(db.Recipes.Value, x => x.Progress > 0);
         }
     }
 }

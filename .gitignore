@@ -352,3 +352,7 @@ MigrationBackup/
 # JetBrains
 .idea/
 
+# LibreOffice
+.~lock*
+
+

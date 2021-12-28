@@ -1,5 +1,3 @@
-using System;
-
 namespace WuphonsReach.FF14Crafting.Solver.Models.Results
 {
     /// <summary>The result after performing the <see cref="Step"/> on the product.</summary>

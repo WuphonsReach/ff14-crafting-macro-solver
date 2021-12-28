@@ -10,6 +10,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\CraftingActions.json" />
     <EmbeddedResource Include="Data\MaterialConditions.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\items.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\recipes.json" />
   </ItemGroup>
 
   <ItemGroup>

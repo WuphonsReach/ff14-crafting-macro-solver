@@ -1,8 +1,13 @@
+using WuphonsReach.FF14Crafting.Solver.Data.Teamcraft;
+
 namespace WuphonsReach.FF14Crafting.Solver.Models
 {
     public class Recipe
     {
         public string Name { get; set; }
+        
+        public int Level { get; set; }
+
         public int Durability { get; set; }
         
         /// <summary>Difficulty is directly related to the number of progress
@@ -13,7 +18,5 @@ namespace WuphonsReach.FF14Crafting.Solver.Models
         /// guaranteed HQ result.  It is displayed in-game on the recipe page.
         /// </summary>
         public int Quality { get; set; }
-        
-        public int Level { get; set; }
     }
 }

@@ -12,6 +12,10 @@
     <EmbeddedResource Include="Data\MaterialConditions.json" />
     <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\items.json" />
     <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\recipes.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\craft-actions.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\job-name.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\job-abbr.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\action-icons.json" />
   </ItemGroup>
 
   <ItemGroup>

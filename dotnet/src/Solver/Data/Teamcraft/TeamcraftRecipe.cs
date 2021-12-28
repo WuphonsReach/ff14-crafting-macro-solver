@@ -4,8 +4,10 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
 {
     public class TeamcraftRecipe
     {
-        public int Id { get; set; }
+        /// <summary>The ID values are usually, but not always, integers.</summary>
+        public string Id { get; set; }
 
+        /// <summary>JobId can be zero, if the recipe is not for a crafting job.</summary>
         [JsonProperty("job")]
         public int JobId { get; set; }
 

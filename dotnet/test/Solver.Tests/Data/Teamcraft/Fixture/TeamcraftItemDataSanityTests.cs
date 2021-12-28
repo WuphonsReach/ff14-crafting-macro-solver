@@ -27,7 +27,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
                 Assert.True(
                     !string.IsNullOrWhiteSpace(item.Value.Name()),
                     $"{item.Key}: {nameof(item.Value.Name)} is null/whitespace."
-                );
+                    );
             }
         }
         

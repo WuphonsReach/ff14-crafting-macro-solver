@@ -17,6 +17,20 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         // the data is stored/retrieved in the future.  All access to the
         // dataset needs to go through these public methods.
 
+        public TeamcraftCraftAction CraftActionById(int craftActionId) => 
+            CraftActions.Value.TryGetValue(craftActionId, out var result) 
+                ? result
+                : null;
+        
+        internal readonly Lazy<IDictionary<int, TeamcraftCraftAction>> CraftActions 
+            = new (() =>
+            {
+                return EmbeddedResources.ReadJson<
+                    TeamcraftJsonFiles,
+                    IDictionary<int, TeamcraftCraftAction>
+                    >("craft-actions.json");
+            });
+
         public TeamcraftItem ItemById(int itemId) => 
             Items.Value.TryGetValue(itemId, out var result) 
                 ? result

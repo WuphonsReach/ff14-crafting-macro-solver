@@ -7,7 +7,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Models
     public class TargetTests
     {
         // The current math is "difficulty -> 100% progress" and "quality -> 100% quality chance".
-        // Crafting level and recipe level do not seem to play a role.
+        // Gave up trying to calculate expected quality, just using data from recipe object.
         
         public static IEnumerable<object[]> CalculateProgressQualityMemberData => new List<object[]>
         {
@@ -50,18 +50,16 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Models
                 Difficulty = recipeDifficulty,
                 Quality = recipeQuality,
             };
+            var target = new Target(crafter, recipe);
 
-            var targetProgressResult = Target.CalculateProgressTarget(crafter, recipe);
-            var targetQualityResult = Target.CalculateQualityTarget(crafter, recipe);
-            
             Assert.True(
-                targetProgressResult == expectedProgressTarget, 
-                $"Progress: expected {expectedProgressTarget}, got {targetProgressResult}"
+                target.Progress == expectedProgressTarget, 
+                $"Progress: expected {expectedProgressTarget}, got {target.Progress}"
                 );
             Assert.True(
-                targetQualityResult == expectedQualityTarget, 
-                $"Quality: expected {expectedQualityTarget}, got {targetQualityResult}."
-            );
+                target.Quality == expectedQualityTarget, 
+                $"Quality: expected {expectedQualityTarget}, got {target.Quality}."
+                );
         }
     }
 }

@@ -14,16 +14,16 @@ namespace WuphonsReach.FF14Crafting.Solver.Models
         public int Durability { get; }
         public int Progress { get; }
         public int Quality { get; }
-        
-        internal static int CalculateProgressTarget(
+
+        private static int CalculateProgressTarget(
             Crafter crafter, 
             Recipe recipe
             )
         {
             return recipe.Difficulty;
         }
-        
-        internal static int CalculateQualityTarget(
+
+        private static int CalculateQualityTarget(
             Crafter crafter, 
             Recipe recipe
             )

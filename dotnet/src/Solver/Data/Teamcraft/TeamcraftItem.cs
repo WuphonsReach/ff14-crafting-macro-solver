@@ -4,6 +4,9 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
 {
     public class TeamcraftItem : IHasTeamcraftLanguages
     {
+        [JsonIgnore]
+        public int Id { get; set; }
+        
         [JsonProperty("en")]
         public string English { get; set; }
         [JsonProperty("de")]

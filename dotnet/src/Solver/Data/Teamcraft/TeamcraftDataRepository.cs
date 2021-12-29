@@ -25,10 +25,14 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftCraftAction>> CraftActions 
             = new (() =>
             {
-                return EmbeddedResources.ReadJson<
+                var result = EmbeddedResources.ReadJson<
                     TeamcraftJsonFiles,
                     IDictionary<int, TeamcraftCraftAction>
                     >("craft-actions.json");
+                
+                foreach (var key in result.Keys) result[key].Id = key;
+                
+                return result;
             });
 
         public TeamcraftItem ItemById(int itemId) => 
@@ -39,10 +43,14 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftItem>> Items 
             = new (() =>
             {
-                return EmbeddedResources.ReadJson<
+                var result = EmbeddedResources.ReadJson<
                     TeamcraftJsonFiles,
                     IDictionary<int, TeamcraftItem>
                     >("items.json");
+                
+                foreach (var key in result.Keys) result[key].Id = key;
+
+                return result;
             });
 
         public TeamcraftRecipe RecipeByItemId(int itemId) => Recipes.Value
@@ -65,10 +73,14 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftJobAbbr>> JobAbbrs 
             = new (() =>
             {
-                return EmbeddedResources.ReadJson<
+                var result = EmbeddedResources.ReadJson<
                     TeamcraftJsonFiles,
                     IDictionary<int, TeamcraftJobAbbr>
                     >("job-abbr.json");
+                
+                foreach (var key in result.Keys) result[key].Id = key;
+
+                return result;
             });
 
         public TeamcraftJobName JobNameById(int itemId) => 
@@ -79,10 +91,14 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftJobName>> JobNames 
             = new (() =>
             {
-                return EmbeddedResources.ReadJson<
+                var result = EmbeddedResources.ReadJson<
                     TeamcraftJsonFiles,
                     IDictionary<int, TeamcraftJobName>
                     >("job-name.json");
+                
+                foreach (var key in result.Keys) result[key].Id = key;
+
+                return result;
             });
     }
 }

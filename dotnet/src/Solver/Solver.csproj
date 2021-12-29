@@ -15,6 +15,7 @@
     <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\craft-actions.json" />
     <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\job-name.json" />
     <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\job-abbr.json" />
+    <EmbeddedResource Include="Data\Teamcraft\apps_client_src_assets_data\job-categories.json" />
   </ItemGroup>
 
   <ItemGroup>

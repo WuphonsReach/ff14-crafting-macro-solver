@@ -65,10 +65,14 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
                 >("recipes.json"); 
             });
         
-        public TeamcraftJobAbbr JobAbbrById(int itemId) => 
-            JobAbbrs.Value.TryGetValue(itemId, out var result) 
+        public TeamcraftJobAbbr JobAbbrById(int id) => 
+            JobAbbrs.Value.TryGetValue(id, out var result) 
                 ? result
                 : null;
+
+        public TeamcraftJobAbbr JobAbbrByAbbreviation(string jobAbbreviation) =>
+            JobAbbrs.Value.Values
+                .FirstOrDefault(x => x.English == jobAbbreviation);
         
         internal readonly Lazy<IDictionary<int, TeamcraftJobAbbr>> JobAbbrs 
             = new (() =>
@@ -83,8 +87,34 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
                 return result;
             });
 
-        public TeamcraftJobName JobNameById(int itemId) => 
-            JobNames.Value.TryGetValue(itemId, out var result) 
+        public IEnumerable<string> JobAbbreviationsForDiscipleOfTheHandCategory() =>
+            JobAbbreviationsForCategory(TeamcraftJobCategory.DiscipleOfTheHand);
+
+        private IEnumerable<string> JobAbbreviationsForCategory(string categoryEnglishName) =>
+            JobCategories.Value.Values
+                .Where(x => x.English == categoryEnglishName)
+                .SelectMany(x => x.JobAbbreviations);
+
+        public TeamcraftJobCategory JobCategoryById(int id) => 
+            JobCategories.Value.TryGetValue(id, out var result) 
+                ? result
+                : null;
+
+        internal readonly Lazy<IDictionary<int, TeamcraftJobCategory>> JobCategories 
+            = new (() =>
+            {
+                var result = EmbeddedResources.ReadJson<
+                    TeamcraftJsonFiles,
+                    IDictionary<int, TeamcraftJobCategory>
+                >("job-categories.json");
+                
+                foreach (var key in result.Keys) result[key].Id = key;
+
+                return result;
+            });
+
+        public TeamcraftJobName JobNameById(int id) => 
+            JobNames.Value.TryGetValue(id, out var result) 
                 ? result
                 : null;
         

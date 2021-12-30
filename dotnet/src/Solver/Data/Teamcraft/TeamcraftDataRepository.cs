@@ -77,15 +77,20 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftJobAbbr>> JobAbbrs 
             = new (() =>
             {
-                var result = EmbeddedResources.ReadJson<
-                    TeamcraftJsonFiles,
-                    IDictionary<int, TeamcraftJobAbbr>
-                    >("job-abbr.json");
+                var result = ReadJobAbbrsJson();
                 
                 foreach (var key in result.Keys) result[key].Id = key;
 
                 return result;
             });
+
+        private static IDictionary<int, TeamcraftJobAbbr> ReadJobAbbrsJson()
+        {
+            return EmbeddedResources.ReadJson<
+                TeamcraftJsonFiles,
+                IDictionary<int, TeamcraftJobAbbr>
+                >("job-abbr.json");
+        }
 
         public IEnumerable<string> JobAbbreviationsForDiscipleOfTheHandCategory() =>
             JobAbbreviationsForCategory(TeamcraftJobCategory.DiscipleOfTheHand);
@@ -106,7 +111,7 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
                 var result = EmbeddedResources.ReadJson<
                     TeamcraftJsonFiles,
                     IDictionary<int, TeamcraftJobCategory>
-                >("job-categories.json");
+                    >("job-categories.json");
                 
                 foreach (var key in result.Keys) result[key].Id = key;
 
@@ -121,14 +126,38 @@ namespace WuphonsReach.FF14Crafting.Solver.Data.Teamcraft
         internal readonly Lazy<IDictionary<int, TeamcraftJobName>> JobNames 
             = new (() =>
             {
-                var result = EmbeddedResources.ReadJson<
-                    TeamcraftJsonFiles,
-                    IDictionary<int, TeamcraftJobName>
-                    >("job-name.json");
+                var result = ReadJobNamesJson();
                 
                 foreach (var key in result.Keys) result[key].Id = key;
 
                 return result;
+            });
+
+        private static IDictionary<int, TeamcraftJobName> ReadJobNamesJson()
+        {
+            return EmbeddedResources.ReadJson<
+                TeamcraftJsonFiles,
+                IDictionary<int, TeamcraftJobName>
+                >("job-name.json");
+        }
+        
+        public TeamcraftJob JobById(int id) => 
+            Jobs.Value.TryGetValue(id, out var result) 
+                ? result
+                : null;
+
+        internal readonly Lazy<IDictionary<int, TeamcraftJob>> Jobs 
+            = new (() =>
+            {
+                // yes, we're double-parsing these two JSON files, but they're small
+                var jobNames = ReadJobNamesJson();
+                var jobAbbrs = ReadJobAbbrsJson();
+
+                return jobNames.Keys
+                    .ToDictionary(
+                        key => key, 
+                        key => new TeamcraftJob(jobNames[key], jobAbbrs[key])
+                        );
             });
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Xunit;
 
@@ -61,6 +62,21 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
         
         [Fact]
+        public void All_JobId_greater_than_zero_map_to_a_JobName()
+        {
+            var db = _fixture.GetRepository();
+            foreach (var recipe in db.Recipes.Value.Where(x => x.JobId is > 0))
+            {
+                var id = recipe.JobId ?? throw new Exception("Something is wrong");
+                var item = db.JobNameById(id);
+                Assert.True(
+                    item != null,
+                    $"ID {recipe.Id}: {nameof(recipe.JobId)} {recipe.JobId} is not a valid JobName ID."
+                );
+            }
+        }
+
+        [Fact]
         public void All_Level_values_are_greater_than_zero()
         {
             var db = _fixture.GetRepository();
@@ -81,12 +97,17 @@ namespace WuphonsReach.FF14Crafting.Solver.Tests.Data.Teamcraft.Fixture
         }
         
         [Fact]
-        public void All_ResultId_greater_than_zero_map_to_an_item()
+        public void All_ResultId_greater_than_zero_and_valid_JobID_map_to_an_item()
         {
             var db = _fixture.GetRepository();
-            foreach (var recipe in db.Recipes.Value.Where(x => x.ResultId.HasValue && x.ResultId > 0))
+            foreach (var recipe in db.Recipes.Value
+                         .Where(x => 
+                             x.ResultId is > 0 
+                             && x.JobId is > 0
+                        ))
             {
-                var item = db.ItemById(recipe.ResultId.Value);
+                var id = recipe.JobId ?? throw new Exception("Something is wrong");
+                var item = db.ItemById(id);
                 Assert.True(
                     item != null,
                     $"ID {recipe.Id}: {nameof(recipe.ResultId)} {recipe.ResultId} is not a valid Item ID."
